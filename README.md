@@ -12,6 +12,7 @@ A collection of foundational C programming exercises focusing on algorithms, fun
 | **[`pro2.c`](pro2.c)** | **Linear Equation Solver** | Solves $ax + b = 0$. Determines if the equation has a unique root, is impossible, or indeterminate. | Functions, pointers (`*x`), status codes |
 | **[`pro3.c`](pro3.c)** | **Quadratic Equation Solver** | Solves $ax^2 + bx + c = 0$ using the discriminant ($\Delta$). Handles real roots, double roots, and complex cases. | `math.h`, `sqrt()`, pointers, mathematical logic |
 | **[`pro4.c`](pro4.c)** | **Dynamic Array Allocation** | Allocates a dynamic array of $N$ doubles on the heap, initializes all positions with value $L$, and frees memory safely. | `malloc()`, `free()`, heap allocation, memory safety |
+| **[`pro5.c`](pro5.c)** | **Random ASCII Characters** | Fills an array of size $N$ with random printable ASCII characters (range 32 to 126). | Arrays, ASCII values, character handling, `rand()` |
 
 ---
 
@@ -35,6 +36,10 @@ gcc pro3.c -o pro3 -lm
 # 4. Dynamic Array Allocation
 gcc pro4.c -o pro4
 ./pro4
+
+# 5. Random ASCII Characters
+gcc pro5.c -o pro5
+./pro5
 ```
 
 ---
