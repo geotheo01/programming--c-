@@ -1,46 +1,42 @@
-//2. Να γραφεί συνάρτηση η οποία θα λύνει την πρωτοβάθμια εξίσωση. Η
-//συνάρτηση θα επιστρέφει (στο όνομά της) 0 αν έχει λύση, 1 αν είναι
-//αδύνατη και δύο αν είναι αόριστη. Σε περίπτωση που έχει λύση θα
-//επιστρέφει και τη ρίζα.
+// Linear equation solver: solves ax + b = 0 using pass-by-reference
 
 #include <stdio.h>
 
 int solve_linear(double a, double b, double *x)
-{ 
-
-	 if(a != 0)               // Αν ο συντελεστής του x δεν είναι μηδέν
-		{
-			*x = -b / a;         // Υπολογισμός της λύσης x = -b/a
-			return 0;           // Υπάρχει μία μοναδική λύση
-		}
-		else if(b != 0)          // Αν το a είναι 0 αλλά το b όχι
-		{
-			return 1;           // Η εξίσωση είναι αδύνατη
-		}
-		else                     // Αν a = 0 και b = 0
-		{
-			return 2;           // Η εξίσωση είναι αόριστη (άπειρες λύσεις)
-		}
+{
+    if(a != 0)
+    {
+        *x = -b / a; // Unique solution x = -b/a
+        return 0;
+    }
+    else if(b != 0)
+    {
+        return 1; // Impossible (no solution)
+    }
+    else
+    {
+        return 2; // Indeterminate (infinite solutions)
+    }
 }
 
-int main()
+int main(void)
 {
-    double a, b, root;         // Συντελεστές και ρίζα
-    int result;               // Κωδικός αποτελέσματος
+    double a, b, root;
+    int result;
 
-    printf("Δώσε a: ");
+    printf("Enter a: ");
     scanf("%lf", &a);
-	printf("Δώσε το b: ");
-	scanf("%lf", &b);
+    printf("Enter b: ");
+    scanf("%lf", &b);
 
-    result = solve_linear(a, b, &root);    // Κλήση συνάρτησης
+    result = solve_linear(a, b, &root);
 
     if(result == 0)
-        printf("Η λύση είναι x = %.2lf\n", root);
+        printf("Solution: x = %.2lf\n", root);
     else if(result == 1)
-        printf("Η εξίσωση είναι αδύνατη.\n");
+        printf("The equation is impossible (no solution).\n");
     else
-        printf("Η εξίσωση είναι αόριστη.\n");
+        printf("The equation is indeterminate (infinite solutions).\n");
 
     return 0;
 }
