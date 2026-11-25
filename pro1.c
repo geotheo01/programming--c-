@@ -1,41 +1,38 @@
-//1.Να γραφεί πρόγραμμα το οποίο θα υλοποιεί το παιχνίδι “Μάντεψε τον
-//Αριθμό” με όρια τυχαίων αριθμών [1..100] και 7 προσπάθειες.
+// Number Guessing Game with random range [1..100] and 7 attempts limit
 
-#include <stdio.h>      // Βιβλιοθήκη για είσοδο και έξοδο (printf, scanf)
-#include <stdlib.h>     // Βιβλιοθήκη για την rand() και srand()
-#include <time.h>       // Βιβλιοθήκη για την time() ώστε να αλλάζει ο τυχαίος αριθμός
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
-int main()              // Κύρια συνάρτηση του προγράμματος
+int main(void)
 {
-    int secret;        // Μεταβλητή που θα αποθηκεύσει τον μυστικό αριθμό
-    int guess;         // Μεταβλητή που θα αποθηκεύει την προσπάθεια του παίκτη
-    int attempts = 7;  // Αριθμός διαθέσιμων προσπαθειών
-    int i;             // Μετρητής για το πλήθος των προσπαθειών
+    int secret;
+    int guess;
+    int attempts = 7;
+    int i;
 
-	srand(time(NULL));              // Αρχικοποίηση γεννήτριας τυχαίων αριθμών με βάση τον χρόνο
-    secret = rand() % 100 + 1;      // Δημιουργία τυχαίου αριθμού από 1 έως 100
-	
-	
-    printf("Παιχνίδι: Μάντεψε τον Αριθμό!\n");      // Εμφάνιση τίτλου παιχνιδιού
-    printf("Ο μυστικός αριθμός είναι από 1 έως 100.\n"); // Εμφάνιση εύρους αριθμών
-    printf("Έχεις 7 προσπάθειες.\n\n");             // Εμφάνιση πλήθους προσπαθειών
-	
-	for(i = 1; i <= attempts; i++)   // Επανάληψη για κάθε προσπάθεια του παίκτη
+    srand(time(NULL));
+    secret = rand() % 100 + 1;
+
+    printf("Game: Guess the Number!\n");
+    printf("The secret number is between 1 and 100.\n");
+    printf("You have 7 attempts.\n\n");
+
+    for(i = 1; i <= attempts; i++)
     {
-		printf("Προσπάθεια %d: Δώσε αριθμό: ", i);  // Εμφάνιση αριθμού προσπάθειας
-        scanf("%d", &guess); 
-		
-		if(guess == secret)        // Έλεγχος αν ο παίκτης βρήκε τον αριθμό
+        printf("Attempt %d: Enter number: ", i);
+        scanf("%d", &guess);
+
+        if(guess == secret)
         {
-            printf("Μπράβο! Βρήκες τον αριθμό %d!\n", secret);  // Μήνυμα επιτυχίας
-            return 0;                // Τερματισμός προγράμματος (νίκη)
+            printf("Congratulations! You found the number %d!\n", secret);
+            return 0;
         }
-		
-		printf("Σου απομένουν %d προσπάθειες.\n\n", attempts - i); // Εμφάνιση εναπομεινάντων προσπαθειών
 
-	}
-	
-	printf("Δυστυχώς έχασες! Ο σωστός αριθμός ήταν %d.\n", secret); // Μήνυμα ήττας
+        printf("Remaining attempts: %d\n\n", attempts - i);
+    }
 
-    return 0;   // Τερματισμός προγράμματος
+    printf("Game over! The correct number was %d.\n", secret);
+
+    return 0;
 }
