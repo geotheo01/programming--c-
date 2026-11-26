@@ -1,28 +1,28 @@
-# C Applied Algorithms & Systems Programming
+# C Programming | Algorithms & Numerical Methods
 
-A modular repository of practical C implementations demonstrating manual memory management, pointer manipulation, numerical analysis, and algorithmic problem-solving.
+A collection of standalone C programs covering algorithms, numerical methods, pointer manipulation, and dynamic memory management.
 
 ---
 
-## 📋 Modules & Implementations
+## 📋 Program Overview
 
-| File | Module | Description | Technical Highlights |
+| File | Program | Description | Technical Highlights |
 | :--- | :--- | :--- | :--- |
-| **[`guess_number.c`](guess_number.c)** | **Interactive Guessing Engine** | CLI-based game engine utilizing pseudo-random generation with bounded search space and attempt control. | `rand()`, `srand()`, `time.h`, iterative control flow |
-| **[`linear_equation.c`](linear_equation.c)** | **Linear Equation Solver** | Analytical solver for $ax + b = 0$ returning solution states (unique, impossible, indeterminate). | Pass-by-reference (`*x`), function interfaces, error codes |
-| **[`quadratic_equation.c`](quadratic_equation.c)** | **Quadratic Equation Solver** | Robust quadratic solver evaluating real and complex roots via discriminant ($\Delta$) analysis. | `math.h`, `sqrt()`, pointers, numerical boundary checks |
-| **[`dynamic_array.c`](dynamic_array.c)** | **Dynamic Array Manager** | Allocates heap memory for contiguous double arrays with explicit initialization and leak-free destruction. | `malloc()`, `free()`, heap management, pointer validation |
-| **[`random_ascii.c`](random_ascii.c)** | **Random ASCII Generator** | Generates bounded character streams across the standard printable ASCII spectrum (32 to 126). | Character buffers, ASCII encoding, random distribution |
-| **[`taylor_series.c`](taylor_series.c)** | **Taylor Series Sine Approximation** | High-precision numerical approximation of $\sin(x)$ using Maclaurin/Taylor expansion bounded by $10^{-6}$ epsilon. | Series expansion, numerical analysis, precision convergence |
+| **[`guess_number.c`](guess_number.c)** | **Number Guessing Game** | CLI game where the player has 7 attempts to guess a random number between 1 and 100. | `rand()`, `srand()`, `time.h`, `for` loop |
+| **[`linear_equation.c`](linear_equation.c)** | **Linear Equation Solver** | Solves $ax + b = 0$ and reports whether the solution is unique, impossible, or indeterminate. | Functions, pointers (`*x`), status return codes |
+| **[`quadratic_equation.c`](quadratic_equation.c)** | **Quadratic Equation Solver** | Solves $ax^2 + bx + c = 0$ using the discriminant ($\Delta$) to find real, double, or complex roots. | `math.h`, `sqrt()`, pointers, discriminant calculation |
+| **[`dynamic_array.c`](dynamic_array.c)** | **Dynamic Array Allocation** | Dynamically allocates an array of $N$ doubles, initializes each element with value $L$, and frees the memory. | `malloc()`, `free()`, heap allocation, pointer checks |
+| **[`random_ascii.c`](random_ascii.c)** | **Random ASCII Generator** | Fills a character array of size $N$ with random printable ASCII characters (values 32 to 126). | Arrays, ASCII values, character handling, `rand()` |
+| **[`taylor_series.c`](taylor_series.c)** | **Taylor Series Sine Approximation** | Approximates $\sin(x)$ using a Taylor series expansion until the term is smaller than $10^{-6}$. | Taylor series, `math.h`, numerical loops |
 
 ---
 
-## 🛠️ Build & Execution
+## 🛠️ How to Compile & Run
 
-All modules are written in standard ANSI/ISO C and compile cleanly using `gcc` on Linux / WSL:
+All programs can be compiled using `gcc` on Linux / WSL:
 
 ```bash
-# 1. Interactive Guessing Engine
+# 1. Number Guessing Game
 gcc guess_number.c -o guess_number
 ./guess_number
 
@@ -30,11 +30,11 @@ gcc guess_number.c -o guess_number
 gcc linear_equation.c -o linear_equation
 ./linear_equation
 
-# 3. Quadratic Equation Solver (linked with math library)
+# 3. Quadratic Equation Solver (requires -lm for math library)
 gcc quadratic_equation.c -o quadratic_equation -lm
 ./quadratic_equation
 
-# 4. Dynamic Array Manager
+# 4. Dynamic Array Allocation
 gcc dynamic_array.c -o dynamic_array
 ./dynamic_array
 
@@ -42,7 +42,7 @@ gcc dynamic_array.c -o dynamic_array
 gcc random_ascii.c -o random_ascii
 ./random_ascii
 
-# 6. Taylor Series Sine Approximation (linked with math library)
+# 6. Taylor Series Sine Approximation (requires -lm for math library)
 gcc taylor_series.c -o taylor_series -lm
 ./taylor_series
 ```
