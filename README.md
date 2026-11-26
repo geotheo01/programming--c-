@@ -1,6 +1,6 @@
 # C Programming | Algorithms & Numerical Methods
 
-A collection of standalone C programs covering algorithms, numerical methods, pointer manipulation, and dynamic memory management.
+A collection of standalone C programs covering algorithms, numerical methods, pointer manipulation, file I/O, and dynamic memory management.
 
 ---
 
@@ -14,6 +14,7 @@ A collection of standalone C programs covering algorithms, numerical methods, po
 | **[`dynamic_array.c`](dynamic_array.c)** | **Dynamic Array Allocation** | Dynamically allocates an array of $N$ doubles, initializes each element with value $L$, and frees the memory. | `malloc()`, `free()`, heap allocation, pointer checks |
 | **[`random_ascii.c`](random_ascii.c)** | **Random ASCII Generator** | Fills a character array of size $N$ with random printable ASCII characters (values 32 to 126). | Arrays, ASCII values, character handling, `rand()` |
 | **[`taylor_series.c`](taylor_series.c)** | **Taylor Series Sine Approximation** | Approximates $\sin(x)$ using a Taylor series expansion until the term is smaller than $10^{-6}$. | Taylor series, `math.h`, numerical loops |
+| **[`client_management.c`](client_management.c)** | **Client Management System** | CRUD system managing client records using fixed-size binary records and direct file addressing. | Binary File I/O, `fseek()`, `struct`, input validation |
 
 ---
 
@@ -45,6 +46,10 @@ gcc random_ascii.c -o random_ascii
 # 6. Taylor Series Sine Approximation (requires -lm for math library)
 gcc taylor_series.c -o taylor_series -lm
 ./taylor_series
+
+# 7. Client Management System
+gcc client_management.c -o client_management
+./client_management
 ```
 
 ---
