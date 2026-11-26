@@ -1,6 +1,6 @@
 # C Programming Practice & Lab Exercises
 
-A collection of foundational C programming exercises focusing on algorithms, functions, pointers, and dynamic memory management.
+A curated collection of foundational C programming exercises focusing on core algorithms, functions, pointers, and dynamic memory management.
 
 ---
 

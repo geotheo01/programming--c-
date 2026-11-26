@@ -1,4 +1,4 @@
-// Function to fill a character array with random printable ASCII values
+// Random Printable ASCII Array: fills an array with printable ASCII characters (32-126)
 
 #include <stdio.h>
 #include <stdlib.h>
