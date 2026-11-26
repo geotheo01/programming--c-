@@ -53,3 +53,10 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+
+# Local files to ignore
+domes1.c
+domes2.c
+programs 1.c
+taylor series.c
