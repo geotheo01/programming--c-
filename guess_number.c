@@ -1,4 +1,4 @@
-// Number Guessing Game with random range [1..100] and 7 attempts limit
+// Number Guessing Game: interactive CLI game with random generator and 7 attempts limit
 
 #include <stdio.h>
 #include <stdlib.h>
