@@ -1,4 +1,4 @@
-// Dynamic memory allocation: allocate and initialize N doubles on the heap
+// Dynamic Array Allocation: heap memory allocation and initialization for N doubles
 
 #include <stdio.h>
 #include <stdlib.h>
