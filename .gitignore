@@ -60,3 +60,9 @@ domes1.c
 domes2.c
 programs 1.c
 taylor series.c
+
+
+# Runtime data files & binary
+*.dat
+clients.dat
+client_management
