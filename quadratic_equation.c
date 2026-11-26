@@ -1,4 +1,4 @@
-// Quadratic equation solver: solves ax^2 + bx + c = 0 using discriminant
+// Quadratic Equation Solver: solves ax^2 + bx + c = 0 with discriminant analysis
 
 #include <stdio.h>
 #include <math.h>
