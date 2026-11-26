@@ -1,4 +1,4 @@
-// Linear equation solver: solves ax + b = 0 using pass-by-reference
+// Linear Equation Solver: solves ax + b = 0 with pass-by-reference pointers
 
 #include <stdio.h>
 
